@@ -13,7 +13,9 @@ const products = () => {
     })
   return (
     <Layout>
-        <Link href={"/products/new"} className=''/>
+        <Link href={"/products/new"} className=''>
+            <button className='rounded-lg border border-pink-600 hover:bg-pink-600 p-2 m-6'>Add New Product</button>
+            </Link>
         <table>
             <thead>
                 <tr>

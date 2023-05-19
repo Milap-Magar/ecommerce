@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+input,
+textarea,
+select {
+    @apply border border-gray-200 rounded w-full py-2 px-3 mb-2;
+}
+
+h1 {
+    @apply text-pink-900 p-6 font-medium text-xl;
+}   
+label {
+    @apply text-gray-600 text-sm;
+}
+table.basic {
+    @apply w-full bg-white rounded-sm shadow-md;
+}

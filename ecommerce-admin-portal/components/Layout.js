@@ -8,10 +8,9 @@ const Layout = ({children}) => {
     if(!session){
         return (
             <>
-
-            <div className=" text-blue-900 flex justify-center text-lg font-medium w-full flex-col items-center h-screen bg-blue-200">
+            <div className=" text-blue-900 flex justify-center text-lg font-medium w-full flex-col items-center h-screen">
               <p className='font-bold text-2xl'>Sign IN</p><br/>
-              <button className='border border-solid border-black p-2 rounded-2xl bg-pink-200 px-4 w-[25%]' onClick={(e) => signIn('google')}>Sign In With Google</button>
+              <button className='border border-solid border-black p-2 rounded-2xl bg-pink-700 px-4 w-[25%]' onClick={(e) => signIn('google')}>Sign In With Google</button>
             </div> 
             
           </>

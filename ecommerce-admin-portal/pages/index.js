@@ -8,11 +8,10 @@ export default function Component() {
   
   return (
     <Layout>
-      <div className="">
-
-        <div className=" text-blue-900 flex justify-between p-4 text-lg font-medium w-full">
+      <div className="bg-pink-100 w-screen h-screen">
+        <div className="text-blue-900 flex justify-between p-4 text-lg font-medium w-full">
         <p>Hello, {session?.user?.name} </p>
-        <div className="bg-gray-100 rounded-xl gap-1">
+        <div className="bg-pink-100 rounded-xl gap-1">
           <img src={session?.user?.image}/>
           <span className="px-2">{session?.user?.email}</span>
         </div>
