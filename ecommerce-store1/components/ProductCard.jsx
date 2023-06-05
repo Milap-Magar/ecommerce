@@ -2,8 +2,7 @@ import CartContext from "@/context/CartContent";
 import React, { useContext } from "react";
 
 const ProductCard = ({ prod }) => {
-
-  const { addProduct } = useContext(CartContext)
+  const { addProduct } = useContext(CartContext);
   const addToCart = (e, id) => {
     e.preventDefault();
     addProduct(id);
@@ -12,16 +11,16 @@ const ProductCard = ({ prod }) => {
   return (
     <>
       <div className="w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
-        <a>
+        <a href={"/product/" + prod._id}>
           <img
-            className="p-8 rounded-t-lg h-64 w-full"
+            className="p-8 rounded-t-lg h-64 w-full cursor-pointer"
             src={prod.images[0]}
             alt="product image"
           />
         </a>
         <div className="px-5 pb-5">
-          <a href="#">
-            <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white">
+          <a href={"/product/" + prod._id}>
+            <h5 className="text-xl font-semibold tracking-tight text-gray-900 dark:text-white cursor-pointer">
               {prod.title}
             </h5>
           </a>
@@ -88,7 +87,7 @@ const ProductCard = ({ prod }) => {
               data-tooltip-target="tooltip-animation"
               href="#"
               className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
-              onClick={(e)=>addToCart(e, prod._id)}
+              onClick={(e) => addToCart(e, prod._id)}
             >
               Add to cart
             </button>
